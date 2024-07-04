@@ -1,1 +1,13 @@
-<h1>Welcome to the Tech Blog!</h1>
+<!-- views/home.handlebars -->
+<div class="container">
+  <h2>Welcome to the Tech Blog!</h2>
+  <button id="postButton">Create a new post</button>
+  {{#each posts as |post| }}
+  <p>
+    {{post.title}}
+  </p>
+  <p>
+    {{post.user.username}}
+  </p>
+  {{/each}}
+</div>
