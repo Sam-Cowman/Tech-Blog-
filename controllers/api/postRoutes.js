@@ -1,4 +1,3 @@
-// controllers/postRoutes.js
 const router = require('express').Router();
 const { Post } = require('../../models');
 
