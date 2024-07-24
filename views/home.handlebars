@@ -1,12 +1,8 @@
 <div class="container">
   <h2>Welcome to the Tech Blog!</h2>
+  {{#if logged_in}}
   <button id="postButton">Create a new post</button>
-  {{#each posts as |post| }}
-  <p>
-    {{post.title}}
-  </p>
-  <p>
-    {{post.user.username}}
-  </p>
-  {{/each}}
+  {{else}}
+  <a href="/login">Log in to create a post</a>
+  {{/if}}
 </div>
