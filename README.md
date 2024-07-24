@@ -13,6 +13,7 @@ The Tech Blog is a CMS-style blog site designed for developers who write about t
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
 - [License](#license)
+- [Deployed Application](#deployed-application)
 - [Questions](#questions)
 
 ## Installation
@@ -121,17 +122,27 @@ Create a database named blog_db.
 
 1. Homepage
 
+![alt text](assets/blog-homepage.jpg)
+
 2. Sign Up Page
+
+![alt text](assets/blog-signup.jpg)
 
 3. Login Page
 
-4. Dashboard
+![alt text](assets/blog-login.jpg)
 
-5. Create Post Page
+4. Create Post Page
 
-6. View Post Page
+![alt text](assets/blog-post.jpg)
 
-7. Comment on Post
+5. View Post Page
+
+![alt text](assets/blog-posts-all.jpg)
+
+6. Comment on Post
+
+![alt text](assets/blog-comment.jpg)
 
 ## Features
 * User authentication with signup and login functionalities
@@ -163,6 +174,9 @@ Contributions are welcome! If you have suggestions for improving this project, p
 ## License
 
 Distributed under the MIT License. See LICENSE for more information.
+
+## Deployed Application 
+
 
 ## Questions
 
