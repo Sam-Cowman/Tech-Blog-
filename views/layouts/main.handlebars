@@ -7,6 +7,19 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/posts">All Posts</a>
+    {{#if logged_in}}
+    <a href="/dashboard">Post Blog</a>
+    <button id="logout">Logout</button>
+    {{else}}
+    <a href="/login">Login</a>
+    <a href="/signup">Sign Up</a>
+    {{/if}}
+  </nav>
   {{{body}}}
+  <script src="/js/logout.js"></script>
+  <script src="/js/script.js"></script> <!-- Include the script here -->
 </body>
 </html>
