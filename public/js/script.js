@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const postButton = document.getElementById('postButton');
+  const postButton = document.getElementById('postButton');
   
-    if (postButton) {
-      postButton.addEventListener('click', function () {
-        alert('Post button clicked!');
-      });
-    }
-  });
+  if (postButton) {
+    postButton.addEventListener('click', function () {
+      window.location.href = '/dashboard';
+    });
+  }
+});
