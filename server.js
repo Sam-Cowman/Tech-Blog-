@@ -4,7 +4,7 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-const sequelize = require('./config/connection');
+const sequelize = require('./config/connection'); // Import sequelize
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -14,7 +14,9 @@ const hbs = exphbs.create({ /* helpers */ });
 
 const sess = {
   secret: 'hardcodedsecretkey', // Hardcoded secret
-  cookie: {},
+  cookie: {
+    maxAge: 900000, // Session will expire after 15 minutes of inactivity
+  },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
@@ -34,6 +36,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(require('./controllers'));
 
+// Test the database connection
+sequelize.authenticate().then(() => {
+  console.log('Connection has been established successfully.');
+}).catch(err => {
+  console.error('Unable to connect to the database:', err);
+});
+
+// Sync the Sequelize models and start the Express server
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening on http://localhost:' + PORT));
 });
