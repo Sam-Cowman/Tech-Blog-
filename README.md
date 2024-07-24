@@ -177,6 +177,7 @@ Distributed under the MIT License. See LICENSE for more information.
 
 ## Deployed Application 
 
+The application is deployed and can be accessed at the following URL: https://tech-blog-9kmk.onrender.com/
 
 ## Questions
 
